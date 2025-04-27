@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Todo Tracker</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Todo Tracker</h1>
+      <button id="modeSwitch" class="mode-button">🌙 / ☀️</button>
+    </header>
+
+    <div class="entry-area">
+      <div class="input-row">
+        <input type="text" id="todoText" placeholder="What needs to be done?">
+        <button id="submitBtn">Add</button>
+      </div>
+      
+      <div class="todo-properties">
+        <div class="prop-item">
+          <label for="deadlineInput">Deadline:</label>
+          <input type="date" id="deadlineInput">
+        </div>
+        
+        <div class="prop-item">
+          <label for="urgencyDropdown">Urgency:</label>
+          <select id="urgencyDropdown">
+            <option value="high">High</option>
+            <option value="medium" selected>Medium</option>
+            <option value="low">Low</option>
+          </select>
+        </div>
+        
+        <div class="prop-item">
+          <label for="groupDropdown">Group:</label>
+          <select id="groupDropdown">
+            <option value="general">General</option>
+            <option value="work">Work</option>
+            <option value="personal">Personal</option>
+            <option value="shopping">Shopping</option>
+            <option value="health">Health</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="search-container">
+      <input type="text" id="searchBox" placeholder="Find todos...">
+    </div>
+
+    <div class="view-controls">
+      <select id="todoFilter">
+        <option value="all">All Todos</option>
+        <option value="completed">Completed</option>
+        <option value="pending">Pending</option>
+        <option value="today">Due Today</option>
+        <option value="overdue">Overdue</option>
+      </select>
+
+      <button id="sortBtn">Sort Newest</button>
+    </div>
+
+    <div id="statsArea" class="stats-display">
+    </div>
+
+    <ul id="todoItems"></ul>
+
+    <div class="bottom-actions">
+      <button id="cleanupBtn">Remove Completed</button>
+      <button id="saveBtn">Save Todos</button>
+      <button id="loadBtn">Load Todos</button>
+    </div>
+  </div>
+
+  <script src="home.js"></script>
+</body>
+</html>
