@@ -145,7 +145,7 @@
   }
   
   .search-container input {
-    width: 100%;
+    width: 96%;
     padding: 12px;
     border-radius: 25px;
     border: 1px solid var(--border);
